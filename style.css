@@ -1,7 +1,7 @@
 h1 {
     color: black;
-    
     text-align: center;
+    padding-top: 20px;
   }
 
 p.userPass {
@@ -16,3 +16,18 @@ p.userPass {
     border-color: purple; /*Puedes poner 4 de estos, uno por lado*/
     text-align: center;
 }
+
+#aside {
+    width: 25%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+nav {
+    width: 25%;
+    background-color: #f1f1f1;
+}
+
+main {
+    margin-left: 25%;
+  }
