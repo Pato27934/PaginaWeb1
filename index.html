@@ -2,17 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title> Pagina Web </title>
+    <title>Login</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Bienvenido!</h1>
-    <div id="password">
-        <div><p class="userPass">Usuario:</p> <input type="user" name="Usuario" required></div>
-        <div><p class="userPass">Password:</p> <input type="password" name="Contraseña" required></div>
-        <br>
-        <button><p>Submit</p></button>
-        <br>
+    <div class="loginContainer">
+        <form class="loginBox">
+            <h1>Iniciar Sesión</h1>
+
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Ingresar</button>
+        </form>
     </div>
+
 </body>
 </html>
