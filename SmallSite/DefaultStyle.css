@@ -1,0 +1,38 @@
+p {
+    color: grey;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-style: italic;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.loginDiv {
+    background-color: rgba(247, 220, 255, 0.598);
+    border-radius: 10px;
+    width: 50%;
+    padding: 20px 30px;
+    margin: auto;
+}
+
+.login {
+    display: block;
+    width: 80%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 8px auto 0px auto;
+}
+
+.login-input {
+    background: transparent;
+    border:none;
+    border-bottom: 2px solid;
+    border-color: white;
+}
+
+body {
+    background-color:blueviolet
+}

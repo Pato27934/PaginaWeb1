@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokeAPI Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: #f5f5f5;
+    }
+
+    form {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    #results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,.08);
+      text-align: center;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    .types {
+      margin-top: .5rem;
+    }
+
+    .type-chip {
+      display: inline-block;
+      padding: .2rem .5rem;
+      margin: .2rem;
+      border-radius: 20px;
+      background: #eee;
+      font-size: .8rem;
+    }
+
+    .skeleton {
+      background: #ddd;
+      height: 200px;
+      border-radius: 12px;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: .6; }
+      50% { opacity: 1; }
+      100% { opacity: .6; }
+    }
+
+    button {
+      padding: .5rem .8rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>PokeAPI Demo</h1>
+
+  <form id="controlsForm">
+    <input id="q" type="text" placeholder="Nombre o ID" />
+    <select id="typeFilter">
+      <option value="">Todos los tipos</option>
+    </select>
+    <select id="sortBy">
+      <option value="id-asc">ID ↑</option>
+      <option value="id-desc">ID ↓</option>
+      <option value="name-asc">Nombre ↑</option>
+      <option value="name-desc">Nombre ↓</option>
+    </select>
+    <button type="submit">Buscar</button>
+  </form>
+
+  <div id="results" aria-busy="false"></div>
+
+  <button id="loadMore">Cargar más</button>
+
+  <!-- Template tarjeta -->
+  <template id="pokemon-card-template">
+    <div class="card">
+      <img class="card-img" />
+      <h3 class="pokemon-name"></h3>
+      <p class="pokemon-id"></p>
+
+      <div class="types"></div>
+
+      <h4>Habilidades</h4>
+      <ul class="ability-list"></ul>
+
+      <h4>Stats</h4>
+      <ul class="stats-list"></ul>
+    </div>
+  </template>
+
+  <!-- Template skeleton -->
+  <template id="pokemon-card-skeleton">
+    <div class="skeleton"></div>
+  </template>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
