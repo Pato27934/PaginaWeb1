@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+#pokemonResultado {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+.poke-card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 8px;
+    text-align: center;
+}
+
+#lowerPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+}
+
+#lowerPage button {
+    background: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+#lowerPage select {
+    background: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}

@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styls.css">
     <title>Rollodex</title>
 </head>
-    <h1 id="titulo">Pokedex</h1>
-    <input id="pokeName" type="text" value = "pikachu">
-    <input id="pokeNumber" type="number">
-    <button id="botonOnePoke">Cargar Pokemon</button>
-    <button id="botonPokes">Cargar Pokes</button>
-    <div id="pokemonResultado"></div>
-    <script src="pokeApp.js"></script>
 <body>
-    
+    <h1 id="titulo">Pokedex</h1>
+    <div id="lowerPage">
+        <label>Nombre del Pokémon:</label>
+        <input id="pokeName" type="text" value = "Pikachu">
+        <button id="botonOnePoke">Cargar Pokemon</button>
+        <label>Tipo de Pokémon:</label>
+        <select id="typeSelect"></select>
+    </div>
+
+    <div id="pokemonResultado"></div>
+
+    <div id="lowerPage">
+        <button id="buttonLeftPage"><</button>
+        <label id="labelPage">0</label>
+        <input id="pageNumber" type="number">
+        <button id="buttonRightPage">></button>
+    </div>
+
+    <script src="pokeApp.js"></script>
 </body>
 </html>
