@@ -231,3 +231,15 @@ async function fetchTypes() {
     const datos = await respuesta.json()
     return datos.results
 }
+
+async function cargarPelea(nombre1, nombre2) {
+
+    const poke1 = await fetchPoke(nombre1)
+    const poke2 = await fetchPoke(nombre2)
+
+    document.getElementById("poke1Name").textContent = poke1.name
+    document.getElementById("poke1Img").src = poke1.sprites.back_default
+
+    document.getElementById("poke2Name").textContent = poke2.name
+    document.getElementById("poke2Img").src = poke2.sprites.front_default
+}

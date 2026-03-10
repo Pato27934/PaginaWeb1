@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stylesPB.css">
+<title>Pelea Pokémon</title>
+</head>
+
+<body>
+<audio id="battleMusic" src="TrainerBattle.mp3" autoplay loop></audio>
+
+<div class="battlefield">
+
+    <!-- Enemy HP Box -->
+    <div class="enemyBox">
+
+        <div class="enemyTop">
+            <span id="poke2Name" class="name">MissingNo</span>
+            <span id="poke2Type" class="type">Normal</span>
+        </div>
+
+        <div class="enemyHpRow">
+            <span class="hpLabel">HP</span>
+            <div class="hpBar">
+                <div id="poke2HpBar" class="hp"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Enemy Sprite -->
+    <img id="poke2Img" class="enemySprite">
+
+
+    <!-- Player Sprite -->
+    <img id="poke1Img" class="playerSprite">
+
+
+    <!-- Player HP Box -->
+    <div class="playerBox">
+
+        <div class="playerTop">
+            <span id="poke1Name" class="name">MissingNo</span>
+            <span id="poke1Type" class="type">Normal</span>
+        </div>
+
+        <div class="playerHpRow">
+            <span class="hpLabel">HP</span>
+            <div class="hpBar">
+                <div id="poke1HpBar" class="hp"></div>
+            </div>
+        </div>
+
+        <div class="playerHpNumbers">
+            <span id="poke1HpText">99 / 99</span>
+        </div>
+
+    </div>
+
+    <div class="actionBox">
+
+        <!-- Modo texto -->
+        <div id="battleText" class="textMode">
+            <p id="battleMessage">¡PROF. RICARDO quiere luchar!</p>
+            <button id="textNext" class="textNext">▶</button>
+        </div>
+    
+        <!-- Modo seleccionar movimientos -->
+        <div id="moveSelect" class="moveMode">
+    
+            <button class="moveBtn" id="move1">Move 1</button>
+            <button class="moveBtn" id="move2">Move 2</button>
+            <button class="moveBtn" id="move3">Move 3</button>
+            <button class="moveBtn" id="move4">Move 4</button>
+    
+        </div>
+    
+    </div>
+
+</div>
+
+<script src="battle.js"></script>
+</body>
+</html>

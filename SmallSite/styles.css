@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #121212;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.battleBox {
+    background: #eaeaea;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.battleBox h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.battleBox label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.battleBox input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: none;
+    background: #fdfdfd;
+    color: black;
+}
+
+.battleBox button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.battleBox button:hover {
+    background: #45a049;
+}

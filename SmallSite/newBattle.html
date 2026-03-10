@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Rollodex</title>
+</head>
+
+<body>
+
+<div class="battleBox">
+    <form id="battleForm">
+        <h2>Iniciar pelea</h2>
+
+        <label for="pokemon1">Pokemon 1</label>
+        <input type="text" id="pokemon1" name="pokemon1" placeholder="Ej: pikachu" required>
+
+        <label for="pokemon2">Pokemon 2</label>
+        <input type="text" id="pokemon2" name="pokemon2" placeholder="Ej: charizard" required>
+
+        <button type="submit">Iniciar pelea</button>
+    </form>
+</div>
+
+<script>
+
+const form = document.getElementById("battleForm")
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault()
+
+    const p1 = document.getElementById("pokemon1").value.toLowerCase()
+    const p2 = document.getElementById("pokemon2").value.toLowerCase()
+
+    window.location.href = "battle.html?p1=" + p1 + "&p2=" + p2
+})
+
+</script>
+
+</body>
+</html>
