@@ -397,13 +397,13 @@ const typeChart = {
             setMessage(attacker.toUpperCase() + " usa " + moveName + "!")
             if(enemyHp === 0 || playerHp === 0){
 
-                const fainted = enemyHp === 0 ? defender : attacker === poke1 ? poke1 : poke2
-                const winner = enemyHp === 0 ? attacker : defender
+                const winner = enemyHp === 0 ? defender : attacker === poke1 ? poke1 : poke2
+                const fainted = enemyHp === 0 ? attacker : defender
             
                 pendingMessage = fainted.toUpperCase() + " se desmayó!"
             
                 setTimeout(() => {
-                    //window.location.href = "win.html?winner=" + winner
+                    window.location.href = "win.html?winner=" + winner
                 }, 1500)
             
             } else { 
@@ -479,7 +479,17 @@ const typeChart = {
     }
     
     function setMessage(text){
+
         document.getElementById("battleMessage").textContent = text
+    
+        const log = document.getElementById("battleLog")
+    
+        if(log){
+            const entry = document.createElement("div")
+            entry.textContent = text
+            log.appendChild(entry)
+        }
+    
     }
 
     //CALCULOS Daño
